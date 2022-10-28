@@ -23,15 +23,15 @@ class User(UserBase):
     class Config:
         orm_mode=True
 
-class Company(BaseModel):
-    title: str
-    category: Optional[str] = None
-    address: Optional[str] = None
-    
 class Product(BaseModel):
     title: str
     description: Optional[str] = None
     company_id: int
+
+class Company(BaseModel):
+    title: str
+    category: Optional[str] = None
+    address: Optional[str] = None
 
 class ProductUpdate(BaseModel):
     title:Optional[str]=None
